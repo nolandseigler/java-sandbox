@@ -41,6 +41,11 @@ public class TransitCalculator {
         return "The best deal is the " + fareStrArr[bestDealIndex] + " package." + " It cost " + Math.round(ridePrices[bestDealIndex] * 100.0) / 100.0 + " per ride.";
     }
     public static void main(String[] args) {
+        int ridesTaken = 30;
+        int daysUsed = 1;
 
+        TransitCalculator transitCalc = new TransitCalculator(daysUsed, ridesTaken);
+
+        System.out.println(transitCalc.getBestFare());
     }
 }
